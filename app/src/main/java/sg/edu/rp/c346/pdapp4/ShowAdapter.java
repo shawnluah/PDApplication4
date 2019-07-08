@@ -1,6 +1,7 @@
 package sg.edu.rp.c346.pdapp4;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,13 +37,16 @@ public class ShowAdapter extends ArrayAdapter<Show> {
         tvShowGenre = rowView.findViewById(R.id.tvShowGenre);
 
         ivSong = rowView.findViewById(R.id.ivShow);
+
         ivStar = rowView.findViewById(R.id.ivStar);
         ivStar2 = rowView.findViewById(R.id.ivStar2);
         ivStar3 = rowView.findViewById(R.id.ivStar3);
         ivStar4 = rowView.findViewById(R.id.ivStar4);
         ivStar5 = rowView.findViewById(R.id.ivStar5);
 
+        int count = position;
         Show currentShow = show.get(position);
+
 
 
         tvShowTitle.setText(currentShow.getShows());
@@ -52,12 +56,16 @@ public class ShowAdapter extends ArrayAdapter<Show> {
 
         ivSong.setImageResource(R.drawable.show);
 
+
+
         if(currentShow.getStars() == 5) {
             ivStar.setImageResource(R.drawable.star);
             ivStar2.setImageResource(R.drawable.star);
             ivStar3.setImageResource(R.drawable.star);
             ivStar4.setImageResource(R.drawable.star);
             ivStar5.setImageResource(R.drawable.star);
+
+
 
         }
         else if(currentShow.getStars() == 4) {

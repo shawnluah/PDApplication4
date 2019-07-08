@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "shows.db";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 5;
     private static final String TABLE_SHOW = "show";
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_SHOW_TITLE = "show_title";
@@ -63,7 +63,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return result;
 
     }
-    public int updateShow(Show data) {
+    public String updateShow(Show data) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -79,14 +79,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //check if record is updated successfully if the affected record is 1
         if (result < 1){
-            Log.d("DBHelper", "Update failed");
+            return "unsuccessful";
         }
 
         db.close();
-        return result;
+        return "successful";
 
     }
-    public int deleteShow(int id){
+    public String deleteShow(int id){
 
         SQLiteDatabase db = this.getWritableDatabase();
         String condition = COLUMN_ID + "= ?";
@@ -96,11 +96,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //check if record is successfully updated if the affected record is 1
         if (result < 1){
-            Log.d("DBHelper", "Update failed");
+            return "unsuccessful";
         }
 
         db.close();
-        return result;
+        return "successful";
 
     }
 

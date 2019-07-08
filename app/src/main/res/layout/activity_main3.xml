@@ -9,18 +9,6 @@
     tools:context=".Main3Activity">
 
     <TextView
-        android:id="@+id/tvShowID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Show ID" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
         android:id="@+id/tvShowTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,7 +26,7 @@
         android:id="@+id/tvLanguage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="language" />
+        android:text="Language" />
 
     <EditText
         android:id="@+id/etLanguage"
@@ -52,7 +40,7 @@
         android:id="@+id/tvGenre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Language" />
+        android:text="Genre" />
 
     <EditText
         android:id="@+id/etGenre"
@@ -69,51 +57,45 @@
         android:text="Stars" />
 
     <RadioGroup
+        android:id="@+id/rg1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <LinearLayout
+        <RadioButton
+            android:id="@+id/radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:orientation="horizontal">
+            android:text="1" />
 
-            <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="1" />
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="2" />
 
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="2" />
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="3" />
 
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="3" />
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="4" />
 
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="4" />
-
-            <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="5" />
-        </LinearLayout>
-
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="5" />
     </RadioGroup>
 
     <LinearLayout
